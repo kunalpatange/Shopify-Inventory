@@ -3,6 +3,9 @@ This is a test project what has basic functionality of an inventory of a store
 
 This project  has implemented *"Push a button export product data to a CSV"* feature.
 
+### link to see the application:
+https://shopify-invntory.herokuapp.com/
+
 ### Requirements:
 
 - Python3
@@ -17,20 +20,6 @@ This project  has implemented *"Push a button export product data to a CSV"* fea
 > pip3 install flask flask-sqlalchemy
 
 Note: pip or pip3 anything what is compatible with python3 works.
-
-Make sure we create the database, for that follow the below steps in the same directory:
-```
-$ python3
-Python 3.8.10 (default, Nov 26 2021, 20:14:08) 
-[GCC 9.3.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> from app import db
-/home/user/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:872: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-  warnings.warn(FSADeprecationWarning(
->>> db.create_all()
->>> exit()
-```
-The above step will result in the creation of file "data.db" in same directory as app.py
 
 Now run the app.py 
 > $ python3 app.py 
