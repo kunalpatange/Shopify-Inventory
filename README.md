@@ -12,7 +12,7 @@ This is a test project what has basic functionality of an inventory of a store
 
 > cd Shopify-Inventory
 
-Before that make sure we create the database for that follow the below steps in the same directory:
+Make sure we create the database, for that follow the below steps in the same directory:
 ```
 $ python3
 Python 3.8.10 (default, Nov 26 2021, 20:14:08) 
@@ -26,6 +26,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 The above step will result in the creation of file "data.db" in same directory as app.py
 
+Now run the app.py 
 > $ python3 app.py 
 
 ```
@@ -39,10 +40,11 @@ output:
  * Debug mode: on
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  * Restarting with stat
-/home/kunal/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:872: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+/home/user/.local/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py:872: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
   warnings.warn(FSADeprecationWarning(
  * Debugger is active!
  * Debugger PIN: 666-371-882
 ```
+Run http://localhost:5000/ on your browser to access the inventory application
 
 
