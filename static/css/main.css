@@ -1,0 +1,10 @@
+body {
+  background-color: beige;
+}
+
+.class-updateForm {
+  width: 600px;
+  box-shadow: 3px 3px 3px 3px grey;
+  margin: 15px;
+  background-color: #e0d8d6;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/main.css">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inventory</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href=""> -->
+    </head>
+    <body>
+       <div >
+           <h1 style="text-align: center;">Shopify-Inventory</h1>
+
+        <a href="/add">Add new Entry</a>
+        <a href="download"  style="float: right;">Export to CSV</a>
+        <br><br>
+           {% if tasks| length < 1 %}
+           <table class="table">
+            <tr>
+                <th>Type</th>
+                <th>Title</th>
+                <th>Summary</th>
+                <th>Quantity</th>
+                <th>Warehouse/Location</th>
+                <th>comment</th>
+                <th>Date last modified</th>
+                <th>Action</th>
+             </tr>
+           </table>
+
+           {% else   %}
+           <!-- style="border:1px solid black;margin-left:auto;margin-right:auto;" -->
+           <table class="table">
+               <tr>
+                   <th>Sr no.</th>
+                   <th>Type</th>
+                   <th>Title</th>
+                   <th>Summary</th>
+                   <th>Quantity</th>
+                   <th>Warehouse/Location</th>
+                   <th>Comment</th>
+                   <th>Date last modified</th>
+                   <th>Action</th>
+                </tr>
+                {% for task in tasks %}
+                <tr>
+                    <th>{{loop.index}}</th>
+                    <th>{{task.type}}</th>
+                    <th>{{task.title}}</th>
+                    <th>{{task.summary}}</th>
+                    <th>{{task.quantity}}</th>
+                    <th>{{task.warehouse}}</th>
+                    <th>{{ task.comment}}
+                    </th>
+                    <th>{{task.date_created.date()}}</th>
+                    <th>
+                        <a href="/delete/{{task.id}}">Delete</a>
+                        <br>
+                        <a href="/update/{{task.id}}">Update</a>
+                    </th>
+                </tr>
+                {% endfor %}
+           </table>
+{% endif %}
+           <!-- <form action="/" method="post">
+               <label for="comment"> comment</label>
+               <input type="text" name="comment" id="comment"><br><br>
+
+              
+               <label for="type">Type of the item:</label>
+               <select name="type" id="type">
+                 <option value="electronics">Electronics</option>
+                 <option value="books">Books</option>
+                 <option value="music">Music</option>
+                 <option value="kitchen">Kitchen</option>
+                 <option value="beauty">Beauty</option>
+                 <option value="grocery">Grocery</option>
+                 <option value="clothing">Clothing</option>
+                 <option value="fashion">Fashion</option>
+               </select>
+               <br><br>
+                  
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title"><br><br>
+
+              <label for="summary">Summary:</label>
+              <input type="text" id="summary" name="summary"><br><br>
+              
+              <label for="quantity">Quantity:</label>
+              <input type="text" id="quantity" name="quantity"><br><br>
+
+
+              <label for="warehouse">Warehouse/Location:</label>
+              <input type="text" id="warehouse" name="warehouse"><br><br>
+              
+              <input type="submit" value="Update">
+           
+           </form> -->
+           </div>
+        <script src="../static/css/main.css" async defer></script>
+    </body>
+</html>
