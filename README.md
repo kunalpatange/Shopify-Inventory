@@ -1,16 +1,21 @@
 # Shopify-Inventory
 This is a test project what has basic functionality of an inventory of a store
 
+This project  has implemented *"Push a button export product data to a CSV"* feature.
+
 ### Requirements:
 
 - Python3
-- flask && flask_sqlalchemy
+- flask && flask-sqlalchemy
 
 ### Installation:
 
 > git clone https://github.com/kunalpatange/Shopify-Inventory.git
 
 > cd Shopify-Inventory
+ 
+> pip3 install flask flask-sqlalchemy
+
 
 Make sure we create the database, for that follow the below steps in the same directory:
 ```
