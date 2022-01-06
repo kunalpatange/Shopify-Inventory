@@ -16,6 +16,7 @@ This project  has implemented *"Push a button export product data to a CSV"* fea
  
 > pip3 install flask flask-sqlalchemy
 
+Note: pip or pip3 anything what is compatible with python3 works.
 
 Make sure we create the database, for that follow the below steps in the same directory:
 ```
