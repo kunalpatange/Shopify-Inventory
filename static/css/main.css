@@ -1,16 +1,13 @@
-body {
-    padding-left: 3%;
+body{
+  padding-left: 3%;
   padding-right: 3%;
   background-color: beige;
 }
 
-.class-updateForm {
+.class-updateForm{
   width: 40%;
   box-shadow: 3px 3px 3px 3px grey;
   margin: auto;
   background-color: #e0d8d6;
   text-align: center;
-  
 }
-
-
