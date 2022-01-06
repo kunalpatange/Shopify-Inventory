@@ -24,6 +24,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> db.create_all()
 >>> exit()
 ```
+The above step will result in the creation of file "data.db" in same directory as app.py
 
 > $ python3 app.py 
 
