@@ -92,7 +92,7 @@ def export():
 
      output = io.StringIO()
      writer = csv.writer(output)
-     header =['Type','Title','Summary','Quantity','Warehouse','Comment','Date Created']
+     header =['Product Type','Product Name','Summary of Product','Quantity Available','Warehouse','Comment','Date Created']
      writer.writerow(header)
      for row in tasks:
          line = row.type +','+row.title+','+row.summary+','+ str(row.quantity)+','+row.warehouse+','+row.comment+','+ str(row.date_created) 

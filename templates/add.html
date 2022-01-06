@@ -17,17 +17,18 @@
     </head>
     <body>
        <div class="content" >
-           <h1 style="text-align: center;"> Add Item in the Inventory</h1>
+           <h1 style="text-align: center;"> Add In Shopify-Inventory</h1>
 
-           <a href="/">Home</a>
+           <a href="/"  class="btn btn-primary">Home</a>
            <br><br>
            <div class="tab-content col-md-12 class-updateForm class-updateForm" 
-        > <br>
-                       <form action="/" method="post" class="form-group" >
-               
+           style="text-align: left;" > <br>
+
+                       <form action="/" method="post" >
+                        <div class="form-group" >
                            
-                           <label for="type">Type of the item:</label>
-                           <select name="type" id="type">
+                           <label for="type">Product Type:</label>
+                           <select  class="form-control" name="type" id="type">
                                <option value="electronics">Electronics</option>
                                <option value="books">Books</option>
                                <option value="music">Music</option>
@@ -37,25 +38,35 @@
                                <option value="clothing">Clothing</option>
                                <option value="fashion">Fashion</option>
                             </select>
-                            <br><br>
-                            
-                            <label for="title">Title:</label>
-                            <input type="text" id="title" name="title" required><br><br>
-                            
-                            <label for="summary">Summary:</label>
-                            <input type="text" id="summary" name="summary" required><br><br>
-                            
-                            <label for="quantity">Quantity:</label>
-                            <input type="text" id="quantity" name="quantity" required><br><br>
+                            </div>
                             
                             
+                            <div class="form-group">
+                            <label for="title">Product Name:</label>
+                            <input  class="form-control" type="text" id="title" name="title" required>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="summary">Summary of Product:</label>
+                            <input  class="form-control" type="text" id="summary" name="summary" required>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="quantity">Quantity Available:</label>
+                            <input  class="form-control" type="text" id="quantity" name="quantity" required>
+                            </div>
+                            
+                            <div class="form-group">
                             <label for="warehouse">Warehouse/Location:</label>
-                            <input type="text" id="warehouse" name="warehouse" required><br><br>
-                            
+                            <input class="form-control" type="text" id="warehouse" name="warehouse" required>
+                            </div>
+
+                            <div class="form-group">
                             <label for="comment"> Comment:</label>
-                            <input type="text" name="comment" id="comment" required> <br><br>
-                            
-                            <input type="submit" value="Add">
+                            <input class="form-control" type="text" name="comment" id="comment" required>
+                            </div>
+
+                            <input  type="submit" value="Add">
                         </form>
             <br>
         </div>

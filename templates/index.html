@@ -15,12 +15,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="stylesheet" href=""> -->
     </head>
-    <body>
-       <div >
+    <body >
+       <div   >
            <h1 style="text-align: center;">Shopify-Inventory</h1>
 
-        <a href="/add">Add new Entry</a>
-        <a href="download"  style="float: right;">Export to CSV</a>
+        <a href="/add" class="btn btn-primary" style="padding-left: 0%;">Add new Entry</a>
+        <a href="download"  class="btn btn-secondary" style="float: right;">Export to CSV</a>
         <br><br>
            {% if tasks| length < 1 %}
            <table class="table">
@@ -38,16 +38,16 @@
 
            {% else   %}
            <!-- style="border:1px solid black;margin-left:auto;margin-right:auto;" -->
-           <table class="table">
+           <table class="table" style="text-align: center;">
                <tr>
                    <th>Sr no.</th>
-                   <th>Type</th>
-                   <th>Title</th>
-                   <th>Summary</th>
-                   <th>Quantity</th>
+                   <th>Product Type</th>
+                   <th>Product Name</th>
+                   <th>Summary of Product</th>
+                   <th>Quantity Available</th>
                    <th>Warehouse/Location</th>
                    <th>Comment</th>
-                   <th>Date last modified</th>
+                   <th>Last modified</th>
                    <th>Action</th>
                 </tr>
                 {% for task in tasks %}
@@ -70,40 +70,6 @@
                 {% endfor %}
            </table>
 {% endif %}
-           <!-- <form action="/" method="post">
-               <label for="comment"> comment</label>
-               <input type="text" name="comment" id="comment"><br><br>
-
-              
-               <label for="type">Type of the item:</label>
-               <select name="type" id="type">
-                 <option value="electronics">Electronics</option>
-                 <option value="books">Books</option>
-                 <option value="music">Music</option>
-                 <option value="kitchen">Kitchen</option>
-                 <option value="beauty">Beauty</option>
-                 <option value="grocery">Grocery</option>
-                 <option value="clothing">Clothing</option>
-                 <option value="fashion">Fashion</option>
-               </select>
-               <br><br>
-                  
-              <label for="title">Title:</label>
-              <input type="text" id="title" name="title"><br><br>
-
-              <label for="summary">Summary:</label>
-              <input type="text" id="summary" name="summary"><br><br>
-              
-              <label for="quantity">Quantity:</label>
-              <input type="text" id="quantity" name="quantity"><br><br>
-
-
-              <label for="warehouse">Warehouse/Location:</label>
-              <input type="text" id="warehouse" name="warehouse"><br><br>
-              
-              <input type="submit" value="Update">
-           
-           </form> -->
            </div>
         <script src="../static/css/main.css" async defer></script>
     </body>
