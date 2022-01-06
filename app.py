@@ -15,7 +15,7 @@ db= SQLAlchemy(app)
 class Inventory(db.Model):
     id=db.Column(db.Integer, primary_key=True)
 
-    comment = db.Column(db.String(200), nullable=False)
+    code = db.Column(db.String(200), nullable=False)
     type = db.Column(db.String(200), nullable=False)
     title = db.Column(db.String(200), nullable=False)
     summary = db.Column(db.String(200), nullable=False)
@@ -30,8 +30,8 @@ class Inventory(db.Model):
 @app.route('/', methods=['POST','GET'])
 def index():
     if request.method == "POST":
-        task_comment = request.form['comment']
-        new_task = Inventory(comment=task_comment, type=request.form['type'], title=request.form['title'], summary=request.form['summary'],
+        task_code = request.form['code']
+        new_task = Inventory(code=task_code, type=request.form['type'], title=request.form['title'], summary=request.form['summary'],
         warehouse=request.form['warehouse'], quantity= int(request.form['quantity']))
         try:
             db.session.add(new_task)
@@ -61,7 +61,7 @@ def delete(id):
 def update(id):
     task = Inventory.query.get_or_404(id)
     if request.method == "POST":
-        task.comment = request.form['comment']
+        task.code = request.form['code']
         task.type = request.form['type']
         task.title = request.form['title']
         task.summary = request.form['summary']
@@ -92,10 +92,10 @@ def export():
 
      output = io.StringIO()
      writer = csv.writer(output)
-     header =['Product Type','Product Name','Summary of Product','Quantity Available','Warehouse','Comment','Date Created']
+     header =['Product Type','Product Name','Summary of Product','Quantity Available','Warehouse','Product Code','Date Created']
      writer.writerow(header)
      for row in tasks:
-         line = row.type +','+row.title+','+row.summary+','+ str(row.quantity)+','+row.warehouse+','+row.comment+','+ str(row.date_created) 
+         line = row.type +','+row.title+','+row.summary+','+ str(row.quantity)+','+row.warehouse+','+row.code+','+ str(row.date_created) 
          line=line.split(',')
          writer.writerow(line)
      print(output.getvalue())
